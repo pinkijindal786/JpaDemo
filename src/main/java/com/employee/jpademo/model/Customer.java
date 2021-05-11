@@ -14,10 +14,13 @@ import javax.validation.Constraint;
 @Table(name= "customer")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer extends Master{
+public class Customer{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int custId;
+
+    @Column
+    private String name;
 
     @Column
     private double expenses;

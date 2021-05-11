@@ -1,18 +1,15 @@
 package com.employee.jpademo.model;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-public class Master {
-    @Column
-    private String name;
-
+public class JsonConverter {
+    @JsonProperty("translatedText")
+    private String text;
 }
+
