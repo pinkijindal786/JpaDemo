@@ -10,7 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name= "employees")
-public class Employee extends Master{
+public class Employee{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int empId;
@@ -18,12 +18,10 @@ public class Employee extends Master{
     @Column(name = "email")
     private String email;
 
+    @Column
+    private String name;
     @Column(name = "salary")
     private int salary;
 
-    public String myName(){
-        Employee e= new Employee();
-        return e.getName();
     }
-}
 

@@ -1,11 +1,12 @@
 package com.employee.jpademo.repository;
 import com.employee.jpademo.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface EmployeeJpaRepository extends Respository<Employee> {
+public interface EmployeeJpaRepository extends JpaRepository<Employee,Integer> {
     @Query(value = "SELECT * FROM employees e WHERE e.name= ?1 AND e.emp_id= ?2",nativeQuery = true)
     Employee getEmployeeByNameAndId(String name, int empId);
 

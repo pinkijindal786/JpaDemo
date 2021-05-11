@@ -1,7 +1,10 @@
 package com.employee.jpademo.repository;
 
 import com.employee.jpademo.model.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface CustomerJpaRepository extends Respository<Customer>{
+@Repository
+public interface CustomerJpaRepository extends JpaRepository<Customer,Integer> {
 
 }
